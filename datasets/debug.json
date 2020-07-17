@@ -1,0 +1,20 @@
+{
+    "entities": {
+        "Wood": {
+            "id": 1,
+            "recipes": []
+        },
+        "Coal": {
+            "id": 2,
+            "recipes": []
+        },
+        "Stick": {
+            "id": 3,
+            "recipes": [["Wood", "Wood"]]
+        },
+        "Torch": {
+            "id": 4,
+            "recipes": [["Stick", "Coal"]]
+        }
+    }
+}

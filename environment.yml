@@ -1,0 +1,10 @@
+name: commonsense-rl-2
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - numpy
+  - matplotlib
+  - pandas
+  - pytorch
+  - torchvision

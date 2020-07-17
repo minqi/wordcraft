@@ -1,0 +1,3 @@
+scikit-build~=0.11.1
+gym>=0.9.6
+spacy>=2.2
