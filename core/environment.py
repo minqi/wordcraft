@@ -20,7 +20,7 @@ import gym
 import timeit
 
 from utils.dotdict import DotDict
-from alchemy.text_lab import TextLab
+from wordcraft.env import WordCraftEnv
 
 
 def _format_env_output(output):
@@ -34,10 +34,10 @@ def env_state_has_instr(state):
             raise ValueError('Gym env state has instr but no instr_length attribute.')
     return False
 
-# Create TextLab env from flags here
+# Create WordCraft env from flags here
 def create_gym_env(flags, seed=None):
     env_name_lower = flags.env.lower()
-    if 'textlab' in env_name_lower:
+    if 'wordcraft' in env_name_lower:
         max_depth = max(flags.depths)
         env = gym.make(
             flags.env, 
@@ -55,12 +55,12 @@ def create_gym_env(flags, seed=None):
             max_mix_steps=flags.max_mix_steps,
             subgoal_rewards=flags.subgoal_rewards,
         )
-        return TextLab2Dict(flags, env)
+        return WordCraft2Dict(flags, env)
     else:
         raise ValueError(f'Environment {flags.env} is not supported.')
 
 
-class TextLab2Dict(gym.ObservationWrapper):
+class WordCraft2Dict(gym.ObservationWrapper):
     def __init__(self, flags, env):
         gym.ObservationWrapper.__init__(self, env)
 

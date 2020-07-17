@@ -7,7 +7,7 @@ from gym.utils import seeding
 
 from utils import seed as utils_seed
 from utils.word2feature import FeatureMap
-from alchemy.recipe_book import Recipe, RecipeBook
+from wordcraft.recipe_book import Recipe, RecipeBook
 
 
 NO_RECIPE_PENALTY = -0.1
@@ -15,7 +15,7 @@ IRRELEVANT_RECIPE_PENALTY = -0.1
 GOAL_REWARD = 1.0
 SUBGOAL_REWARD = 1.0
 
-class TextLab(gym.Env):
+class WordCraftEnv(gym.Env):
 	"""
 	Simple text-only RL environment for crafting multi-step recipes.
 
@@ -29,7 +29,7 @@ class TextLab(gym.Env):
 		shuffle_features=False,
 		random_feature_size=300,
 		max_depth=1,
-		split='by_goal',
+		split='by_recipe',
 		train_ratio=1.0,
 		num_distractors=0,
 		uniform_distractors=False,
@@ -264,6 +264,6 @@ class TextLab(gym.Env):
 
 
 gym.envs.registration.register(
-    id='textlab-multistep-goal-v0',
-    entry_point=f"{__name__}:TextLab",
+    id='wordcraft-multistep-goal-v0',
+    entry_point=f"{__name__}:WordCraftEnv",
 )

@@ -1,4 +1,4 @@
-name: commonsense-rl-2
+name: wordcraft
 channels:
   - pytorch
   - defaults

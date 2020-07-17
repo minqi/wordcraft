@@ -36,7 +36,7 @@ Buffers = typing.Dict[str, typing.List[torch.Tensor]]
 
 
 def model_for_env(flags, env, kg_model=None):
-    if flags.env.lower().startswith('textlab'):
+    if flags.env.lower().startswith('wordcraft'):
         if flags.arch == 'random':
             model = RandomAgent(env.observation_space, env.action_space)
         elif 'selfattn' in flags.arch:

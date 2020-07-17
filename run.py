@@ -66,7 +66,7 @@ def get_cmd_args():
                         help="Whether to modulate policy logits with selection score from KBC model.")
 
     # Env settings
-    parser.add_argument("--env", type=str, default="textlab-multistep-goal-v0",
+    parser.add_argument("--env", type=str, default="wordcraft-multistep-goal-v0",
                         help="Environment.")
     parser.add_argument("--data_path", type=str, default="datasets/alchemy2.json",
                         help="Path to data")

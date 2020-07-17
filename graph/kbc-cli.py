@@ -10,7 +10,7 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 
 from utils import seed as utils_seed
-from alchemy.recipe_book import RecipeBook
+from wordcraft.recipe_book import RecipeBook
 from utils.word2feature import FeatureMap
 from .kbcr import ComplEx
 from .kbcr.regularizers import N2, N3
@@ -145,7 +145,7 @@ def get_cmd_args():
 						help="Experiment name or model ID.")
 	parser.add_argument("--data_path", type=str, default="datasets/alchemy2.json",
 						help="Path to recipe data.")
-	parser.add_argument("--save_dir", type=str, default='~/model_cache/alchemy',
+	parser.add_argument("--save_dir", type=str, default='~/model_cache/wordcraft',
 						help="Path to save binary serialized RecipeBook instance and ComplEx models to preserve train/test split.")
 
 	# Data params
