@@ -33,7 +33,7 @@ Train a self-attention actor-critic using IMPALA on WordCraft:
 ```
 python -m run \
         --xpid "testing" \
-        --env 'textlab-multistep-goal-v0' \
+        --env 'wordcraft-multistep-goal-v0' \
         --split by_recipe \
         --train_ratio 0.8 \
         --depths 1 \
@@ -55,7 +55,7 @@ python -m run \
 ```
 
 ### The Environment
-Create a new WordCraft Gym environment: `env = gym.make('textlab-multistep-goal-v0', **kwargs)`. See the table below for a listing of the relevant keyword arguments.
+Create a new WordCraft Gym environment: `env = gym.make('wordcraft-multistep-goal-v0', **kwargs)`. See the table below for a listing of the relevant keyword arguments.
 
 | Argument | Description | default |
 | ------ | ------ | ------- |
